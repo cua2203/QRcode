@@ -1,6 +1,6 @@
 {
-  "name": "Ngày giờ trên ảnh",
-  "short_name": "Ngày giờ",
+  "name": "员工码",
+  "short_name": "员工码",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",

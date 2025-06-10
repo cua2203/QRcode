@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   
   <title>员工码</title>
 
-  <!-- Full màn hình trên iPhone khi Add to Home Screen -->
+  <!-- PWA support -->
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#000000" />
-
-  
-  <!-- iOS icon -->
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <link rel="apple-touch-icon" href="icon.png" />
 
   <style>
@@ -22,9 +21,11 @@
       font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
-    body, html {
+    html, body {
+      width: 100%;
       height: 100%;
       overflow: hidden;
+      background-color: #fff;
     }
 
     .background {
@@ -34,48 +35,47 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      filter: brightness(1);
       z-index: -1;
     }
 
     .datetime1 {
       position: absolute;
-      top: 161px;
+      top: 22vh;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 4vw;
       color: black;
-      font-size: 15px;
       user-select: none;
     }
 
     .datetime2 {
       position: absolute;
-      top: 348.15px;
+      top: 48vh;
       left: 50%;
       transform: translateX(-50%);
-      color: #666666;
-      font-size: 16.5px;
-      line-height: 25px;
+      font-size: 4.5vw;
+      color: #666;
       user-select: none;
+      line-height: 1.4;
     }
 
     .blinking-text {
       position: absolute;
-      top: 437.5px; /* ngay trên elapsed time */
+      top: 60vh;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 5vw;
       color: #00CC33;
-      font-size: 17.5px;
       user-select: none;
     }
 
     .elapsed-time {
       position: absolute;
-      top: 462.35px;
+      top: 65vh;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 4.5vw;
       color: #00CC33;
-      font-size: 16px;
       user-select: none;
     }
   </style>
@@ -119,10 +119,9 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    // Nhấp nháy văn bản
     setInterval(() => {
       const blinking = document.getElementById('blinkingText');
-      blinking.style.visibility = (blinking.style.visibility === 'hidden') ? 'visible' : 'hidden';
+      blinking.style.visibility = (blinking.style.visibility === 'hidden') ? 'visible' : 'visible';
     }, 500);
   </script>
 </body>

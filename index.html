@@ -119,14 +119,18 @@
 
     updateDateTime();
     setInterval(updateDateTime, 1000);
-
-    setInterval(() => {
-      const blinking = document.getElementById('blinkingText');
-      blinking.style.visibility = (blinking.style.visibility === 'hidden') ? 'visible' : 'visible';
-    }, 500);
+    
+    // Nhấp nháy đúng
+  setInterval(() => {
+    const blinking = document.getElementById("blinkingText");
+    blinking.style.visibility =
+      blinking.style.visibility === "hidden" ? "visible" : "hidden";
+  }, 500);
+    
   </script>
 </body>
 </html>
+
 
 
 

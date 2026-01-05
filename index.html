@@ -101,12 +101,12 @@
       const ss = String(now.getSeconds()).padStart(2, '0');
 
       const dateTimeFull = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
-      const dateOnly = `${yyyy}-${mm}-${dd}  15:55`;
+      const dateOnly = `${yyyy}-${mm}-${dd}  19:50`;
 
       document.getElementById('datetime1').textContent = dateTimeFull;
       document.getElementById('datetime2').textContent = dateOnly;
 
-      const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 15, 55, 0);
+      const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 19, 50, 0);
       let diff = now - startTime;
       if (diff < 0) diff = 0;
       const elapsedHours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
@@ -127,6 +127,7 @@
   </script>
 </body>
 </html>
+
 
 
 

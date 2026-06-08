@@ -101,13 +101,13 @@
       const ss = String(now.getSeconds()).padStart(2, '0');
 
       const dateTimeFull = `${yyyy}-${mm}-${dd} ${hh}:${mi}:${ss}`;
-      const dateOnly = `${yyyy}-${mm}-${dd}  07:45`;
+      const dateOnly = `${yyyy}-${mm}-${dd}  19:45`;
 
       document.getElementById('datetime1').textContent = dateTimeFull;
       document.getElementById('datetime2').textContent = dateOnly;
 
       
-      const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 07, 45, 0);
+      const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 19, 45, 0);
 
 // Nếu giờ hiện tại nhỏ hơn 15:55
 // => có thể là chưa tới giờ HOẶC đã qua nửa đêm
